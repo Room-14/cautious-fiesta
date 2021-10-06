@@ -1,0 +1,267 @@
+@import url(https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  font-family: "Palanquin", sans-serif;
+  background: #edecf6;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  flex-direction: column;
+}
+
+header {
+  background: #0f0f6d;
+  width: 100%;
+  height: 100px;
+}
+
+.main-title {
+  text-align: center;
+  color: #fff;
+  line-height: 100px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-size: 16px;
+  font-family: "Palanquin", sans-serif;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  background: #141a31;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  transition: all 0.1s ease-in;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  text-align: center;
+}
+
+button:hover {
+  background: #5c00ff;
+}
+
+button:focus {
+  outline: none;
+}
+
+/*  © Developed with ❤️ by G Rohit. */
+
+.btn-secondary {
+  background: #ffffff;
+  color: #141a31;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+}
+
+svg {
+  margin: 0 5px;
+}
+
+.title {
+  max-width: 30ch;
+  text-align: center;
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 36px auto;
+}
+
+.apiSearch {
+  position: relative;
+  margin: 50px auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: #8e97b6;
+}
+
+#userInput {
+  font-family: "Palanquin", sans-serif;
+  padding: 16px 16px 16px 65px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #dfe8ed;
+  border-radius: 50px;
+  line-height: 1.2;
+  background: #ffffff;
+  color: #000000;
+}
+
+#userInput::placeholder {
+  color: #8e97b6;
+  font-weight: 400;
+}
+
+#userInput:focus {
+  outline: none;
+}
+
+.lead {
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+/* Card Styling */
+
+#allCardsContainer {
+  max-width: 1150px;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.eachCard {
+  background: #fff;
+  border-radius: 10px;
+  min-height: 220px;
+  max-width: 350px;
+  position: relative;
+  margin: 10px;
+}
+.eachCard:hover {
+  box-shadow: 0 4px 10px #00000030;
+}
+.cardImage {
+  margin-right: 16px;
+}
+
+.cardContent {
+  display: flex;
+  padding: 30px;
+}
+
+.cardTitle {
+  line-height: 1.2;
+  /* font-size: 21px; */
+}
+
+.cardSubTitle {
+  font-size: 14px;
+  color: #151926;
+}
+
+.cardText {
+  line-height: 1.6;
+  font-weight: normal;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.83, 0, 0.18, 0.78);
+}
+
+.userActions {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.83, 0, 0.18, 0.78);
+  position: absolute;
+  bottom: 0;
+}
+
+.eachCard:hover .cardText {
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.83, 0, 0.18, 0.78);
+}
+
+.eachCard:hover .userActions {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.83, 0, 0.18, 0.78);
+}
+
+.credits {
+  margin: 35px auto;
+}
+
+.spacer {
+  height: 100px;
+}
+
+/*  Footer styes */
+
+footer {
+  position: absolute;
+  font-size: 12px;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 14px;
+  background-color: #f1f1f1;
+  color: #000000;
+  text-align: center;
+}
+
+footer a,
+.credits a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid;
+}
+
+footer a:hover,
+.credits a:hover {
+  border-bottom: 1px transparent;
+}
+
+@media all and (max-width: 1024px) {
+  main {
+    padding: 14px;
+  }
+  .title {
+    font-size: 24px;
+    margin: auto;
+  }
+
+  .apiSearch {
+    margin: 30px auto;
+  }
+  #userInput {
+    font-size: 14px;
+  }
+  .searchIcon {
+    top: 25%;
+  }
+
+  .lead {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #allCardsContainer {
+    justify-content: center;
+  }
+}
