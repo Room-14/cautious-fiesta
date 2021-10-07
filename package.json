@@ -4,7 +4,8 @@
   "description": "An attendance marking app",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "author": "Dominick;Gideon",
   "license": "ISC",
