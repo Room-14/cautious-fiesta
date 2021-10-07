@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
 const PORT = process.env.PORT || 3000;
 const authRoutes = require('./routes/authRoutes')
+const { requireAuth } = require('./middlewares/authMiddleware')
 
 const app = express();
 
@@ -23,6 +24,6 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 
 // routes
 app.get('/', (req, res) => res.render('index'));
-app.get('/dashboard', (req, res) => res.render('dashboard'));
+app.get('/dashboard', requireAuth, (req, res) => res.render('dashboard'));
 app.get('/appAttendash', (req, res) => res.render('appAttendash'));
 app.use(authRoutes)
