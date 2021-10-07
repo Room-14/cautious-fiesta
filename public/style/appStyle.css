@@ -93,6 +93,8 @@ nav {
 	font-weight: 600;
 }
 
+
+
 .navigation-bar ul li a.btn:hover {
 	background-color: var(--primary-color);
 	color: whitesmoke;
