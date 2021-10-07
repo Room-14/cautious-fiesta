@@ -26,9 +26,9 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="#" class="active">
+                    <a href="/" class="active">
                         <span class="las la-users"></span>
-                        <span>Courses</span>
+                        <span>Homepage</span>
                     </a>
                 </li>
 
@@ -41,9 +41,8 @@
         <header>
             <h2>
                 <label for="nav-toggle">
-                    <span class="las la-bars"></span>
+                    <span class="las la-bars">Dashboard</span>
                 </label>
-                Dashboard
             </h2>
 
 
@@ -53,9 +52,15 @@
                 <!-- <img src="#" alt="" width="30px" height="30px"> -->
 
                 <div>
-                    <h4>John Doe</h4>
+                    <% if(user) { %>
+                        <h4>
+                            <%= user.username %>
+                        </h4>
+                        <% } else{ %>
+                            <h4>John Doe</h4>
+                            <% } %>
                 </div>
-                <button><a href="/logout">Logout</a></button>
+                <button class="logout"><a href="/logout">Logout</a></button>
             </div>
 
         </header>
